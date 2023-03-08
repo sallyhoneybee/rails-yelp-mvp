@@ -7,9 +7,13 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 
+
+<p><strong>Create New Review</strong></p>
+<%= render "reviews/form" %>
+
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
-  <% @restaurant.reviews.each do |review| %>
+  <% @reviews.each do |review| %>
     <li class="list-group-item">rating: <%= review.rating %> | <%= review.content %> </li>
   <% end %>
 </ul>
