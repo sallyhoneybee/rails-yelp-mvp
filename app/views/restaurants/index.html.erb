@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<%= link_to "New Restaurant", new_restaurant_path, class: "btn btn-primary"%>
+
+<% @restaurants.each do |restaurant| %>
+  <ul class="list-group">
+  <li class="list-group-item"><h2><%= restaurant.name %></h2></li>
+  <li class="list-group-item"><h3><%= restaurant.category %></h3></li>
+  <li class="list-group-item"><p><%= restaurant.address %></p></li>
+  <li class="list-group-item"><p><%= restaurant.phone_number %></p></li>
+  </ul>
+<% end %>
