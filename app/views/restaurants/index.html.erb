@@ -4,7 +4,7 @@
 
 <% @restaurants.each do |restaurant| %>
   <ul class="list-group">
-  <li class="list-group-item"><h2><%= restaurant.name %></h2></li>
+  <li class="list-group-item"><h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2></li>
   <li class="list-group-item"><h3><%= restaurant.category %></h3></li>
   <li class="list-group-item"><p><%= restaurant.address %></p></li>
   <li class="list-group-item"><p><%= restaurant.phone_number %></p></li>
